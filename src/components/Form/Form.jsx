@@ -16,7 +16,6 @@ export class Form extends Component {
     // створюю новий контакт та провевіряю чи він існує вже
     e.preventDefault();
 
-    console.log(this.props.contacts);
     if (
       this.props.contacts.some(el =>
         el.name.toLowerCase().includes(this.state.name.toLowerCase())

@@ -16,7 +16,6 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    console.log('Mount');
     const contact = localStorage.getItem('contacts');
     const parseContacts = JSON.parse(contact);
     if (parseContacts) {
@@ -38,7 +37,6 @@ export class App extends Component {
   };
 
   handleDelete = ({ target }) => {
-    console.dir(target.parentElement.id);
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(
         el => !el.id.includes(target.parentElement.id)
